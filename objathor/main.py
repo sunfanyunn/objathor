@@ -102,6 +102,7 @@ def annotate_asset(
                 view_indices=[str(float(angle)) for angle in render_angles],
                 local_renders=True,
             ),
+            get_best_synset=False
         )
 
         # -1.0 * ... needed to undo the rotation of the object in the render
