@@ -2,6 +2,25 @@
 
 Objaverse asset annotator and importer for use in THOR.
 
+## Changes Made
+1. use `gpt-4o`
+
+2. set `get_best_synset` to False
+### 
+Go to `objathor/objathor/main.py`, around line 100, add the argument to the function `get_initial_annotation`
+
+```python
+        anno, urls = get_initial_annotation(
+            uid,
+            thumbnail_urls_cfg=dict(
+                base_url=render_dir,
+                view_indices=[str(float(angle)) for angle in render_angles],
+                local_renders=True,
+            ),
+>>>         get_best_synset=False
+        )
+```
+
 ## Installation
 
 Install ai2thor:
